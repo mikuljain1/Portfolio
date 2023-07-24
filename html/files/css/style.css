@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+
+ 
+
+.sidebar{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    transition:  0.3s ease-in-out;
+}
+
+.sidebarGo{
+    transform: translate(-210px, 0px);
+    position: absolute;
+    }
+
+.sidebar nav{
+    margin: 32px;
+}
+
+.sidebar nav li{
+    list-style: none;
+    font-size: 22px;
+    padding: 39px 18px;
+    text-align: center;
+
+}
+
+.sidebar nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.container{
+    display: flex   ;
+}
+
+.infocontainer{
+    display: flex;
+    height: 38vh;
+    width: 80vw;
+    margin: 125px auto;
+    justify-content: space-around;
+}
+
+.devinfo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Roboto Slab', serif;
+}
+
+.hello{
+    padding-top: 86px;
+    font-size: 25px;
+}
+
+form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+}
+
+form input{
+    margin: 34px;
+    border: none;
+    border-radius: 15px;
+    font-size: 13px;
+    outline: none;
+    padding: 14px;
+}
+
+.button{
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.btn{
+    background-color: #000000;
+    border: none;
+    color: #FFF;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    transition-property: background-color, color;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #000;
+    }
+
+
+
+.btn a{
+    text-decoration: none;    
+    color: #FFF;
+} 
+
+.btn a:hover{
+    color: #000;
+}
+
+.form{
+    margin-top: 10px;
+}
+
+.devinfo{
+    padding: 10px;
+}
+
+.img img{
+    padding: 10px;;
+    height: 58vh; 
+    border: #212121 2px solid;
+    border-radius: 10%;
+}
+.heading{    
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size:50px;
+    margin:30px;
+}
+
+.form-sec{
+    margin: 30px 63px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h2{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Slab';
+    margin-left: 16px;
+}
+
+
+.blogitem{
+    margin: 30px 55px;
+}
+
+p{
+    text-align: justify;
+    padding: 30px;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.links{
+    height: 5vh;
+}
+
+.header{
+    height: 35px;
+    float: right;
+    margin: 10px;
+}
+
+
+.menu{
+    position: absolute;
+    top: 10px;
+    left: 13px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.cross{
+    cursor: pointer;
+    margin-left: 149px;
+}
+
+.intro{
+    margin: 30px 55px;
+}
+
+
+.skill{
+    
+    background-color: rgb(223,27,27);
+    width: 160px;
+    height: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px solid black;
+ }
+
+.skillcontainer{
+    padding: 30px;
+}
+
+
+ .skill_item{
+    display: table-cell;
+    padding: 6px 20px 0 60px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+
+}
+
+.s5{
+    width: 200px;
+    background-color: pink;
+}
+
+.fiftey{
+    width: 150px;
+    background-color: orangered;
+    
+}
+
+.t5{
+    width: 130px;
+    background-color: greenyellow;
+}
+
+
+
+
+@media (max-width: 850px){
+    
+    .img{
+        display: none;
+    }
+    
+    .blogcontainer p{
+        padding: 22px 5px;
+    }
+
+    .heading{
+        margin: 65px 0;
+    }
+
+    .form-sec form{
+        margin: 0;
+    }
+    
+    .content {
+        margin: 33px 11px;
+    }
+    
+    .btn{
+        margin: 5px 5px;
+        padding: 11px 17px;
+    }
+    .intro{
+        margin: 0px;
+    }
+
+    .skill_item{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    .form{
+        margin-top: 30px;
+    }
+
+
+}
+
+@media (max-width: 950px){
+    .img{
+        display: none;
+    }
+}
+
+@media (max-height: 570px){
+    .sidebar{
+        overflow-y: scroll;
+    }
+}
+
+@media (max-height: 400px){ 
+    .sidebar{
+        -webkit-box-align: center; 
+        
+    }
+} 
+
+@media (max-width: 400px) {
+    .form-sec div{
+        margin-bottom: 20px;
+    }
+
+    .heading{
+        margin: 20px 0;
+        font-size: 45px;
+    }
+
+    h2{
+        font-size: 35px;
+    }
+
+    .header{
+        margin: 10px 5px;
+    }
+
+    .menu{
+        top: 12px;
+    }
+    .blogitem{
+        margin: 10px 30px;
+    }
+}
