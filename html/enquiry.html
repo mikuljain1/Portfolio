@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="files/css/style.css" />
+    <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8471390030673207"
+      crossorigin="anonymous"></script></head>
     <title>Enquire</title>
   </head>
     <body>
@@ -15,7 +17,7 @@
             <ul>
               <li><a href="#">Home</a></li>
               <li><a href="intro.html">My Intro</a></li>
-              <li><a href="services.html">Services</a></li>
+              <!-- <li><a href="services.html">Services</a></li> -->
               <li><a href="blog.html">Blog</a></li>
               <li><a href="contact.html">Contact Me</a></li>
               <li><a href="enquiry.html">Enquiry</a></li>
@@ -32,7 +34,7 @@
           
           <div class="links">
             <a href="mailto:mikuljain024@gmail.com" target="_blank"><img src="files/images//links/email.png" alt="E-mail" class="header"></a>
-            <a href="https://www.linkedin.com/in/mikul-jain-bb543822a/" target="_blank"><img src="files/images/links/linkedin.png" alt="LinkedIn" class="header"></a>
+            <a href="https://www.linkedin.com/in/mikul-jain-baa2842b2/" target="_blank"><img src="files/images/links/linkedin.png" alt="LinkedIn" class="header"></a>
             <a href="https://github.com/mikuljain1" target="_blank"><img src="files/images/links/github.png" alt="GitHub" class="header"></a>
             <a href="https://www.facebook.com/mikul.jain.58" target="_blank"><img src="files/images/links/facebook.png" alt="facebook" class="header"></a>
             <a href="https:wa.me/9667783232" target="_blank"><img src="files/images/links/whatsapp.png" alt="WhatsApp" class="header"></a>
@@ -42,17 +44,59 @@
           <div>
             <div class="form-sec">
                 <h1 class="heading">Enquire</h1>
-                <form action="">
-                    <input type="text" id="name" placeholder="Enter your Name" required>
-                    <input type="email" id="email" placeholder="Enter your E-Mail" required>
-                    <input type="text" id="phone" placeholder="Enter your Phone No." required>
-                    <input type="text" id="enquiry" placeholder="Enter your Message/Enquiry" required>
+                <form id="enquiryForm" action="/submitting" method="post">
+                    <input type="text" id="Cname" placeholder="Enter your Name" required>
+                    <input type="email" id="Cemail" placeholder="Enter your E-Mail" required>
+                    <input type="text" id="Cphone" placeholder="Enter your Phone No." required>
+                    <input type="text" id="Cenquiry" placeholder="Enter your Message/Enquiry" required>
+                    <button type="submit" class="btn btn-sm form">Submit</button>
                 </form>
-                <button type="submit" class="btn btn-sm form">Submit</button>
             </div>
                     
         </div>
     </div>
+
+    <script>
+
+    
+      document.getElementById('enquiryForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+      
+      // Get form data
+      var formData = {
+        Cname: document.getElementById('Cname').value,
+        Cemail: document.getElementById('Cemail').value,
+        Cphone: document.getElementById('Cphone').value,
+        Cmessage: document.getElementById('Cenquiry').value
+      };
+    
+      // Send form data to backend
+      fetch('http://127.0.0.1:3000/submitting', { // Updated URL
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        console.log(data); // Log the response from the backend
+        // Optionally, you can display a success message to the user
+        alert('Form submitted successfully!');
+      })
+      .catch(error => {
+        console.error('Error submitting form:', error);
+        // Optionally, you can display an error message to the user
+        alert('There was an error submitting the form. Please try again later.');
+      });
+    });
+    </script>
+
     <script src="files/css/script.js"></script>
   </body>
 </html>

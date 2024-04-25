@@ -76,7 +76,15 @@
 
 .hello{
     padding-top: 86px;
-    font-size: 25px;
+    font-size: 23px;
+}
+
+.name{
+    font-size: 50px;
+}
+
+#element{
+    font-size: 23px;
 }
 
 form{
@@ -92,6 +100,7 @@ form{
 form input{
     margin: 34px;
     border: none;
+    /* border: 1px solid rgba(255,255,255,0.25); */
     border-radius: 15px;
     font-size: 13px;
     outline: none;
@@ -144,7 +153,7 @@ form input{
 
 .img img{
     padding: 10px;;
-    height: 58vh; 
+    height: 62vh; 
     border: #212121 2px solid;
     border-radius: 10%;
 }
@@ -163,23 +172,62 @@ form input{
 
 
 h2{
-    font-size: 40px;
+    text-align: center;
+    font-size: 55px;
     display: flex;
     flex-direction: column;
     font-family: 'Roboto Slab';
     margin-left: 16px;
 }
 
-
-.blogitem{
-    margin: 30px 55px;
+.blogcontainer{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
 }
 
-p{
+
+.blogitem{
+    /* position: static; */
+    /* position: relative; */
+    width: 76%;
+    overflow: hidden;
+    /* margin: 30px 55px; */
+    margin: 30px 55px;
+    border: 2px solid black;
+    border-radius: 10px;
+    /* transition-duration: transform 5s ease; */
+    transition: transform 0.5s ease-in-out, box-shadow 1s ease;
+}
+
+.blogitem:hover{
+    box-shadow: 10px 10px 20px  10px rgba(0, 0, 0, 0.5); /* Adjust shadow properties for elevation effect */
+    transform: translateY(-5px);
+}
+
+ .blogP{
     text-align: justify;
+    height: 230px;
     padding: 30px;
     font-size: 20px;
     font-family: 'Lato', sans-serif;
+    overflow: hidden;
+    cursor: default; /* Change cursor to default */
+    user-select: none; /* Disable text selection */
+    transition: 1s ease;
+}
+
+.blogP:hover{
+    /* height: 600px; */
+    height: auto;
+}
+
+.blogP p{
+    padding-bottom: 10px;
+}
+
+.blogitem h2{
+    padding: 13px;
 }
 
 .links{
@@ -237,9 +285,25 @@ p{
 
 }
 
+.suggest{
+    display: none;
+}
+
 .s5{
     width: 200px;
     background-color: pink;
+}
+
+.intro-para{
+    padding: 0 10px;
+    text-align: center;
+}
+
+.about-me{
+    text-align: justify;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
 }
 
 .fiftey{
@@ -264,6 +328,28 @@ p{
     
     .blogcontainer p{
         padding: 22px 5px;
+    }
+
+    .blogitem{
+        border: 1px solid black;
+        width: 90%;
+    }
+
+    .blogP{
+        padding: 5px;
+        text-align: left;
+    }
+    .suggest{
+        display: block;
+    }
+
+    .suggest p{
+        color: red;
+        text-align: center;
+    }
+
+    .blogP ol li{
+        padding: 5px 0;
     }
 
     .heading{
